@@ -50,6 +50,7 @@ exports.signup = async (req, res) => {
       if (!isPasswordValid) {
         return res.status(403).json({
           status: "fail",
+           massage: 'proww in cor',
           error: "Password is not correct",
         });
       }
@@ -91,7 +92,7 @@ try{
 catch(error){
     res.status(400).json({
         status: "fail",
-        message: "Can't get the stores",
+        message: "Can't get the all",
         error: error.message,
       });
 } 

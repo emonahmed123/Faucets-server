@@ -18,9 +18,9 @@ const userRoute =require("./routes/user.route")
 app.use('/api/v1/user',userRoute)
 
 //databse
-
-mongoose.connect('mongodb://localhost:27017/emon').then(()=>{
-    console.log(`database coonction is successfull`)
+mongoose.connect(`mongodb+srv://${process.env.DB_EMON_AHMED}:${process.env.DB_PASS}@cluster0.1uacied.mongodb.net/?retryWrites=true&w=majority`)
+.then(() => {
+  console.log(`database coonction is successfull`)
 })
 
 app.get("/", (req, res) => {

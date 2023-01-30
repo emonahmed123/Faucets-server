@@ -22,7 +22,7 @@ const userSchema = mongoose.Schema(
               minLowercase: 3,
               minNumbers: 1,
               minUppercase: 1,
-              minSymbols: 1,
+              
             }),
           message: "Password {VALUE} is not strong enough.",
         },
@@ -34,11 +34,6 @@ const userSchema = mongoose.Schema(
         enum: ["user","admin"],
         default: "user",
       },
-  
-      passwordChangedAt: Date,
-      passwordResetToken: String,
-      passwordResetExpires: Date,
-    
 
 
       },
@@ -49,10 +44,7 @@ const userSchema = mongoose.Schema(
   );
 
   userSchema.pre("save", function (next) {
-    // if (!this.isModified("password")) {
-    //   //  only run if password is modified, otherwise it will change every time we save the user!
-    //   return next();
-    // }
+    
     const password = this.password;
   
      const hashedPassword = bcrypt.hashSync(password);
