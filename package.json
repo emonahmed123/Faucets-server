@@ -1,12 +1,11 @@
 {
   "name": "fucats-app-server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js ",
     "start-dev": "nodemon index.js",
-   "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +21,15 @@
     "mongoose": "^6.9.0",
     "nodemon": "^2.0.20",
     "validator": "^13.7.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emonahmed123/Faucets-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emonahmed123/Faucets-server/issues"
+  },
+  "homepage": "https://github.com/emonahmed123/Faucets-server#readme",
+  "description": ""
 }
